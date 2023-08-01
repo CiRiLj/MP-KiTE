@@ -87,7 +87,7 @@ def main():
     nltk.download("punkt")
     nltk.download("stopwords")
 
-    file = os.listdir('/datasets')
+    file = os.listdir('/datasets/')
     f_file = [i for i in file if i.endswith('.xlsx' or '.csv')]
     file_path = f_file[0]
 
