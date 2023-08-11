@@ -266,7 +266,7 @@ if __name__ == "__main__":
     with col2:
         if st.button("Pos/Neg") or st.session_state.model2_computed:
             main1()
-            for i in list_theme:
+            for i in list_key:
                 st.write(str(i))     
                 
             st.session_state.model2_computed = True    
