@@ -211,10 +211,13 @@ def main():
 #    return list_theme
 
 def main1():
+    global list_key
+    list_key = []
     sentiment_pipeline = pipeline("sentiment-analysis")
     list_txt = list(sentences)
     for i in range(5):
-        st.write(sentiment_pipeline(list_txt[i]))  
+        list_key.append(sentiment_pipeline(list_txt[i]))  
+    return list_key    
 
 def plot1():
     # Pie chart, where the slices will be ordered and plotted counter-clockwise:
@@ -264,8 +267,6 @@ if __name__ == "__main__":
         if st.button("Pos/Neg") or st.session_state.model2_computed:
             main1()
             for i in list_theme:
-                st.write(str(i))
-            if st.button("Pie Chart 2"):
-                plot2()      
+                st.write(str(i))     
                 
             st.session_state.model2_computed = True    
