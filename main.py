@@ -253,7 +253,7 @@ if __name__ == "__main__":
             st.session_state.model1_computed = True    
         # Right column content
     with col2:
-        if if st.button("Pie Chart 1") or st.session_state.model2_computed:
+        if st.button("Pie Chart 1") or st.session_state.model2_computed:
                plot1()
                 
             st.session_state.model2_computed = True    
